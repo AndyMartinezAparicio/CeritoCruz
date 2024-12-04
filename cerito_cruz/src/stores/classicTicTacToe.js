@@ -12,12 +12,15 @@ export const useClassicTicTacToe = defineStore('counter', () => {
         ['', '', ''],
         ['', '', '']
     ])
+    const linea = ref([-1,-1,-1])
+    
+    
     const sonidos = useSonidos();
 
     //ganador
     const winner = computed(() => CalculateWinner(board.value.flat()))
     const empate = computed(() => CheckDraw(board.value.flat()))
-  
+
     const CalculateWinner = (board) => {
 
         //Combinaciones posibles para ganar
@@ -28,6 +31,7 @@ export const useClassicTicTacToe = defineStore('counter', () => {
     
             if (board[a] && board[a] === board[b] && board[a] === board[c]) {
                 sonidos.playEndGameSound()
+                linea.value = [a,b,c]
                 return board[a]  //retornar ganador
             }
         }
@@ -69,8 +73,9 @@ export const useClassicTicTacToe = defineStore('counter', () => {
             ['', '', '']
         ]
         player.value = 'X'
+        linea.value = [-1,-1,-1]
     }
 
 
-    return {player, board, MakeMove, ResetGame, empate, winner}
+    return {player, board, MakeMove, ResetGame, empate, winner, linea}
 })

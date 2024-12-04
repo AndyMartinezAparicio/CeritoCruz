@@ -26,8 +26,8 @@ const sonidos = useSonidos();
                     'casilla',
                     { 'text-orange': cell === 'X' },
                     { 'text-blue': cell === 'O' },
-                    { 'pressed': cell !== '' },
-                    // { 'winning-cell': getWinningCells().includes(y * 3 + x) }
+                    { 'winning-cell': classicTicTacToe.linea.includes(x * 3 + y) },
+                    { 'pressed': cell !== '' }
                     ]"
                 >
 
@@ -95,9 +95,26 @@ const sonidos = useSonidos();
         background-color: rgba(68, 0, 68, 0.27); /* Morado casi transparente */
         pointer-events: none; /* Deshabilita eventos del ratón */
     }
+    
+    .casilla.winning-cell {
+    position: relative;
+    overflow: hidden;
+    }
+
+    .casilla.winning-cell::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(88, 1, 88, 0.575);
+        transition: background-color 0.5s ease-in-out;
+    }
 
     .casilla.pressed:hover,
     .casilla.pressed:active {
         transform: none;
     }
+
 </style>
