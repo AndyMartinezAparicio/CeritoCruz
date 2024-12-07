@@ -6,11 +6,12 @@ const classicTicTacToe = useClassicTicTacToe();
 </script>
 
 <template>
-    <v-container class="">
+    <v-container min-width="300" >
         <!-- Tablero -->
 
-        <div v-for="(row, x) in classicTicTacToe.board" :key="x" class="d-flex align-center justify-center">
-            <div v-for="(cell, y) in row" :key="y" @click="classicTicTacToe.MakeMove(x, y)" :class="[
+        <div v-for="(row, x) in classicTicTacToe.board" :key="x" class="d-flex align-center justify-center" >
+            <div v-for="(cell, y) in row"  :key="y" @click="classicTicTacToe.MakeMove(x, y)" :class="[
+                
                 'casilla',
                 { 'text-orange': cell === 'X' },
                 { 'text-blue': cell === 'O' },

@@ -10,7 +10,7 @@ const classicTicTacToe = useClassicTicTacToe();
 <template>
 	<v-container fluid min-height="100vh">
 		<v-row align="center" justify="center" class="fill-height">
-			<v-col align="center" cols="8" sm="6" md="4">
+			<v-col align="center" cols="12" sm="6" md="4">
 				<h1>Tic Tac Toe </h1>
 
 				<v-card-text v-if="classicTicTacToe.winner">
