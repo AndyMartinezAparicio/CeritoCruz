@@ -14,6 +14,9 @@ export const useClassicTicTacToe = defineStore('counter', () => {
     ])
     const linea = ref([-1,-1,-1])
     
+    const clasicGame = false;
+    const cola = []
+    let num = 1
     
     const sonidos = useSonidos();
 
@@ -63,6 +66,25 @@ export const useClassicTicTacToe = defineStore('counter', () => {
         player.value = player.value === 'X' ? 'O' : 'X'
         
         sonidos.playMoveSound()
+
+        if(!clasicGame){
+            console.log('valor de x y Y:' + x + y)
+            cola.push(x)
+            cola.push(y)
+            console.log('Cola:' + cola)
+            if(cola.length > 12){
+                x = cola.shift()
+                y = cola.shift()
+                console.log( 'cola despues de quitar casilla' + cola)
+                console.log('X = ' + x )
+                console.log('y = ' + y )
+                ClearMove(x,y)
+            }
+        }
+    }
+
+    const ClearMove = (x,y) => {
+        board.value[x][y] = ''
     }
       
     //Funcion para resetear juego
@@ -74,8 +96,9 @@ export const useClassicTicTacToe = defineStore('counter', () => {
         ]
         player.value = 'X'
         linea.value = [-1,-1,-1]
+        cola.length = 0
     }
 
 
-    return {player, board, MakeMove, ResetGame, empate, winner, linea}
+    return {player, board, MakeMove, ResetGame, empate, winner, linea, ClearMove, clasicGame, cola, num}
 })
