@@ -27,7 +27,7 @@ const classicTicTacToe = useClassicTicTacToe();
     </v-container>
     <v-container class="d-flex justify-space-around">
 
-        <v-btn @click="classicTicTacToe.ResetGame">
+        <v-btn @click="classicTicTacToe.ResetGame" prepend-icon="mdi-restart">
             Reiniciar
         </v-btn>
 
@@ -45,7 +45,7 @@ const classicTicTacToe = useClassicTicTacToe();
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48px;
+    font-size: 55px;
     /* Tamaño del texto comparable a una X/O */
     cursor: pointer;
 }
@@ -71,7 +71,7 @@ const classicTicTacToe = useClassicTicTacToe();
 }
 
 .casilla.winning-cell {
-    background-color: rgba(62, 2, 83, 0.736);
+    background-color: rgba(78, 3, 106, 0.736);
 }
 
 .casilla.pressed:hover,
