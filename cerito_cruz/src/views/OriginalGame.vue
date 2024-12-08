@@ -11,18 +11,18 @@ const classicTicTacToe = useClassicTicTacToe();
 	<v-container fluid min-height="100vh">
 		<v-row align="center" justify="center" class="fill-height">
 			<v-col align="center" cols="12" sm="6" md="4">
-				<h1>Tic Tac Toe </h1>
+				<h1>Comienzan las Xs</h1>
 
 				<v-card-text v-if="classicTicTacToe.winner">
-					<h2>{{ `Player '${classicTicTacToe.winner}' wins!` }}</h2>
+					<h1>{{ ` ${classicTicTacToe.winner} GANA! 🤑` }}</h1>
 				</v-card-text>
 
 				<v-card-text v-else-if="classicTicTacToe.empate">
-					<h2>Se trancó esta talla</h2>
+					<h1>EMPATE 🥱</h1>
 				</v-card-text>
 
 				<v-card-text v-else>
-					<h2>Turno de {{ classicTicTacToe.player }}</h2>
+					<h1>Turno de {{ classicTicTacToe.player }}</h1>
 				</v-card-text>
 
 				<TictactoeTablero2 />
