@@ -2,6 +2,7 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import moveSound from '../assets/move.mp3'
 import endGameSound from '../assets/endGame.mp3'
+import empateSound from '../assets/empate.mp3'
 
 export const useSonidos = defineStore('sonidos', () => {
     const playMoveSound = () => {
@@ -14,5 +15,10 @@ export const useSonidos = defineStore('sonidos', () => {
         audio.play()
       }
 
-  return { playMoveSound, playEndGameSound}
+      const playEmpate = () => {
+        const audio = new Audio(empateSound)
+        audio.play()
+      }
+
+  return { playMoveSound, playEndGameSound, playEmpate}
 })

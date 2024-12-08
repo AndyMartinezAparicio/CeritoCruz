@@ -14,7 +14,7 @@ export const useClassicTicTacToe = defineStore('counter', () => {
     ])
     const linea = ref([-1,-1,-1])
     
-    const clasicGame = false;
+    let clasicGame = true;
     const cola = []
     let num = 1
     
@@ -46,7 +46,7 @@ export const useClassicTicTacToe = defineStore('counter', () => {
     const CheckDraw = (board) => {
         const allCellsFilled = board.every(cell => cell !== '')
         if (allCellsFilled) {
-            sonidos.playEndGameSound()
+            sonidos.playEmpate()
         }
         return allCellsFilled
     }
@@ -99,6 +99,9 @@ export const useClassicTicTacToe = defineStore('counter', () => {
         cola.length = 0
     }
 
+    const setMode = (value) => {
+        clasicGame = value
+    }
 
-    return {player, board, MakeMove, ResetGame, empate, winner, linea, ClearMove, clasicGame, cola, num}
+    return {player, board, MakeMove, ResetGame, empate, winner, linea, ClearMove, clasicGame, cola, num, setMode}
 })
