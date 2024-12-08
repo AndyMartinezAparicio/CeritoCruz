@@ -5,26 +5,31 @@
                 <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
             </template>
 
-            <v-app-bar-title>Tic Tac Toe Game</v-app-bar-title>
+            <v-app-bar-title class="text-h5 ">👾Cerito Cruz Web👾</v-app-bar-title>
 
             <template v-slot:append>
-                <v-btn icon="mdi-dots-vertical"></v-btn>
+                <v-btn icon="mdi-github" href="https://github.com/AndyMAG-dev"  target="_blank"></v-btn>
             </template>
         </v-app-bar>
 
         <v-main>
             <v-navigation-drawer v-model="drawer" temporary>
                 
-                <v-list-item title="Inicio"></v-list-item>
-                <v-divider></v-divider>
-                <v-list-item link title="Pagina principal" to="/" prepend-icon="mdi-view-dashboard"></v-list-item>
-                <v-list-item link title="About" to="/about" prepend-icon="mdi-forum"></v-list-item>
-                <v-divider></v-divider>
-                <v-list-item title="Juegos"></v-list-item>
-                <v-divider></v-divider>
-                <v-list-item link title="List Item 1" to="/originalGame"></v-list-item>
-                <v-list-item link title="List Item 2"></v-list-item>
-                <v-list-item link title="List Item 3"></v-list-item>
+                <v-list density="compact">
+
+                    <v-list-subheader>Inicio</v-list-subheader>
+                    <v-divider></v-divider>
+                    <v-list-item link title="Página principal" to="/" prepend-icon="mdi-home"></v-list-item>
+                    <v-list-item link title="Informacion Extra" to="/about" prepend-icon="mdi-information"></v-list-item>
+                </v-list>
+
+                <v-list density="compact">
+                    <v-list-subheader>Juegos</v-list-subheader>
+                    <v-divider></v-divider>
+                    <v-list-item link title="3x3 Original" to="/originalGame" prepend-icon="mdi-numeric-3-box-multiple-outline"></v-list-item>
+                    <v-list-item link title="5x5" subtitle="No Disponible" disabled prepend-icon="mdi-numeric-5-box-multiple-outline"></v-list-item>
+                    <v-list-item link title="7x7" subtitle="No Disponible" disabled prepend-icon="mdi-numeric-7-box-multiple-outline"></v-list-item>
+                </v-list>
 
             </v-navigation-drawer>
         </v-main>

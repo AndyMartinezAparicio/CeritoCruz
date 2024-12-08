@@ -1,90 +1,33 @@
-<script setup>
-import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
-</script>
-
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Documentation</template>
+  <v-container fluid>
+    <v-row>
+      <v-col cols="12">
+        <h1 class="display-3 mb-4 text-center">¡Hola! Bienvenidos al Cerito Cruz, o al Tres en Raya, o al Tic-Tac-Toe, o al...</h1>
+        
+        <p class="mb-6">Pues he creado esta página web para que puedas jugar el juego que nadie pidió y nadie quería, pero el más fácil de hacer 😁. Por cierto, tampoco fue tan fácil, así que ya que estás aquí, prueba al menos las cosas que hice. </p>
 
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
-  </WelcomeItem>
+        <h2 class="mb-4 mt-6 text-center">Qué hay en este sitio</h2>
+        <ul>
+          <li>El juego clásico, el de toda la vida, donde todos te ganan.</li>
+          <li>Aunque también para que no te aburras, le puse cositas para que no juegues lo de siempre.</li>
+          <li>Eso sí, necesitas un amigo o mascota para probarlo porque no se puede jugar contra una IA. (aún)</li>
+        </ul>
 
-  <WelcomeItem>
-    <template #icon>
-      <ToolingIcon />
-    </template>
-    <template #heading>Tooling</template>
+        <h2 class="mb-4 mt-6 text-center">De dónde surgió la idea</h2>
+        <p class="text-justify mb-6">Mi profesor de Programación Web puso como reto hacer un Cerito Cruz, y me motivé demasiado. (No tenía que hacer ni la mitad de cosas que hice)</p>
 
-    This project is served and bundled with
-    <a href="https://vite.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a>
-    and
-    <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-      >Cypress Component Testing</a
-    >.
-
-    <br />
-
-    More instructions are available in <code>README.md</code>.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Ecosystem</template>
-
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>Community</template>
-
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a>
-    and follow the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
-  </WelcomeItem>
+        <h2 class="mb-4 mt-6 text-center">Mensaje extra</h2>
+        <p class="text-justify">
+          Si no te gusta el diseño de la página, normal, es que no le sé a eso, pero creo que no quedó tan mal, ¿no? no se, ve a jugar y no leas tanto.</p>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
+
+
+<style scoped>
+  .subtitle {
+    font-size: 0.8em;
+    color: #666;
+  }
+</style>
