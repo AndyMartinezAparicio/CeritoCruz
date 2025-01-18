@@ -11,7 +11,7 @@
             <h2 class="mb-4 mt-6 text-left">Para crear esta web simple usé las tecnologías que he ido aprendiendo en
               clase.</h2>
             <ul>
-              <li class="font-weight-bold text-subtitle-1 ">Para la creación de está pagina usé el framework de frontend
+              <li class="font-weight-bold text-subtitle-1 ">Para la creación de está página usé el framework de frontend
                 <span class="text-no-wrap bg-secondary"> Vue.js junto con Vuetify</span>.</li>
               <li class="font-weight-bold text-subtitle-1 ">Claramente conocimientos básicos de los lenguajes <span
                   class="text-no-wrap bg-secondary">JavaScript, Css y Html</span>.</li>

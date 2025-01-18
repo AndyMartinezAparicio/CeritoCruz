@@ -2,9 +2,9 @@
   <v-container fluid>
     <v-row>
       <v-col cols="12">
-        <h1 class="display-3 mb-4 text-center">¡Hola! Bienvenidos al Cerito Cruz, o al Tres en Raya, o al Tic-Tac-Toe, o al...</h1>
+        <h1 class="display-3 mb-4 text-center">¡Hola! Bienvenidos al Cerito Cruz, Tres en Raya o Tic-Tac-Toe</h1>
         
-        <p class="mb-6">Pues he creado esta página web para que puedas jugar el juego que nadie pidió y nadie quería, pero el más fácil de hacer 😁. Por cierto, tampoco fue tan fácil, así que ya que estás aquí, prueba al menos las cosas que hice. </p>
+        <p class="mb-6">He creado esta página web para que puedas jugar el juego que nadie pidió pero el más sencillo de hacer 😁. Por cierto, tampoco fue tan fácil, así que ya que estás aquí, prueba al menos las cosas que hice. </p>
 
         <h2 class="mb-4 mt-6 text-center">Qué hay en este sitio</h2>
         <ul>
@@ -14,7 +14,7 @@
         </ul>
 
         <h2 class="mb-4 mt-6 text-center">De dónde surgió la idea</h2>
-        <p class="text-justify mb-6">Mi profesor de Programación Web puso como reto hacer un Cerito Cruz, y me motivé demasiado. (No tenía que hacer ni la mitad de cosas que hice)</p>
+        <p class="text-justify mb-6">Está página fue un reto de mi profesor de Programación Web, la idea era hacer un Cerito Cruz sencillo pero yo aproveché para practicar varios aspectos de la asignatura.</p>
 
         <h2 class="mb-4 mt-6 text-center">Mensaje extra</h2>
         <p class="text-justify">
