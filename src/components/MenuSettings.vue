@@ -37,7 +37,7 @@ const handleSave = () => {
         <v-container>
 
           <v-list>
-            <v-list-item prepend-icon="mdi-cog-outline" title="OPCIONES" subtitle="Un par de configuraciones sencillas">
+            <v-list-item prepend-icon="mdi-cog-outline" title="OPCIONES" subtitle="Modo vs IA aún no disponible.">
 
             </v-list-item>
           </v-list>
